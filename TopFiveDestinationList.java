@@ -6,7 +6,6 @@ import java.net.URISyntaxException;
 import java.io.IOException;
 
 // Jonathan Ayala
-// CS-250
 public class TopFiveDestinationList {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -32,7 +31,7 @@ class TopDestinationListFrame extends JFrame {
         listModel = new DefaultListModel();
 
 
-        //Make updates to your top 5 list below. Import the new image files to resources directory.
+       
         addDestinationNameAndPicture("1. Tokyo, Japan- A neon-lit blend of tradition and futurism.", new ImageIcon(getClass().getResource("/resources/tokyo.jpg")), "https://www.gotokyo.org");
         addDestinationNameAndPicture("2. Maui, Hawaii- Pristine beaches and breathtaking sunsets.", new ImageIcon(getClass().getResource("/resources/maui.jpg")), "https://www.gohawaii.com"); 
         addDestinationNameAndPicture("3. Rome, Italy- Walking through a living museum of history.", new ImageIcon(getClass().getResource("/resources/rome.jpg")), "https://www.turismoroma.it");
@@ -131,7 +130,7 @@ class TextAndIconListCellRenderer extends JLabel implements ListCellRenderer {
 
     public Component getListCellRendererComponent(JList list, Object value,
     int index, boolean isSelected, boolean hasFocus) {
-        // The object from the combo box model MUST be a TextAndIcon.
+        
         TextAndIcon tai = (TextAndIcon) value;
 
         // Sets text and icon on 'this' JLabel.
@@ -163,9 +162,7 @@ class TextAndIconListCellRenderer extends JLabel implements ListCellRenderer {
     }
 
     // The following methods are overridden to be empty for performance
-    // reasons. If you want to understand better why, please read:
-    //
-    // http://java.sun.com/javase/6/docs/api/javax/swing/DefaultListCellRenderer.html#override
+    // reasons. 
 
     public void validate() {}
     public void invalidate() {}
